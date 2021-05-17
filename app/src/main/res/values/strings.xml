@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Assignment IWizards</string>
+    <string name="createdAt">createdAt</string>
+    <string name="search">Search</string>
+    <string name="applied">Applied</string>
+    <string name="apply">Apply</string>
+    <string name="jobs_not_found">Jobs not found!!</string>
+    <string name="no_net_connection">No Internet Connection</string>
+</resources>

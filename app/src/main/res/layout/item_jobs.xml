@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="jobs"
+            type="com.example.assignmentiwizards.repository.model.JobsModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        app:cardElevation="@dimen/dp_5"
+        app:cardCornerRadius="@dimen/dp_4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                imageSrc="@{jobs.companyLogo}"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_74"
+                android:layout_margin="@dimen/dp_4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/loading_img" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dp_72" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:ellipsize="end"
+                android:maxLines="@integer/two"
+                android:text="@{jobs.title}"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvCompany"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="TextView\nabc" />
+
+            <TextView
+                android:id="@+id/tvCompany"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:ellipsize="end"
+                android:maxLines="@integer/one"
+                android:text="@{jobs.company}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                tools:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="@integer/one"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="@{jobs.type}"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toTopOf="@+id/tvLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompany"
+                tools:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="@integer/one"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="@{jobs.location}"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvType"
+                tools:text="TextView" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toTopOf="@+id/tvCreatedAt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+            <TextView
+                android:id="@+id/tvCreatedAt"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:maxLines="@integer/one"
+                text="@{jobs.createdAt}"
+                type='@{`createdAt`}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnApply"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:text="TextView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApply"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_4"
+                android:minWidth="@dimen/dp_0"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvCreatedAt"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
