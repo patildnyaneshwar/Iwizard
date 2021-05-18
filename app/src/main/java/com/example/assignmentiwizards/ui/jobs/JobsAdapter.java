@@ -68,6 +68,7 @@ public class JobsAdapter extends RecyclerView.Adapter<JobsAdapter.ViewHolder> {
         public ViewHolder(@NonNull ItemJobsBinding itemView) {
             super(itemView.getRoot());
             binding = itemView;
+//            binding.viewImgGradientBg.setAlpha(0.5f);
         }
 
         void bind(JobsModel jobsModel) {
