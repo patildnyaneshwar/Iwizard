@@ -18,16 +18,10 @@ android {
 
     /*signingConfigs {
         release {
-            storeFile file("release-key.keystore")
+            storeFile file("/home/dnyaneshwar/AndroidStudioProjects/ProjectCreds/IWAssignment/iwkeystore.jks")
             storePassword 'password'
-            keyAlias 'alias'
-            keyPassword 'iwizard'
-        }
-        qa {
-            storeFile file("release-key.keystore")
-            storePassword 'password'
-            keyAlias 'alias'
-            keyPassword 'iwizard'
+            keyAlias 'iwassignment'
+            keyPassword 'password'
         }
     }*/
 
@@ -43,7 +37,7 @@ android {
             buildConfigField "String", "Type", '"I AM A DEBUG"'
         }
         qa{
-//            signingConfigs signingConfigs.qa
+            debuggable true
             applicationIdSuffix ".qa"
             versionNameSuffix "-qa"
             buildConfigField "String", "Type", '"I AM A QA"'
