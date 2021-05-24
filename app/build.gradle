@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
 }
 apply plugin: "androidx.navigation.safeargs"
+apply plugin: "com.google.gms.google-services"
+apply plugin: 'com.google.firebase.crashlytics'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -12,7 +14,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -38,6 +40,7 @@ android {
         }
         qa{
             debuggable true
+            initWith debug
             applicationIdSuffix ".qa"
             versionNameSuffix "-qa"
             buildConfigField "String", "Type", '"I AM A QA"'
@@ -51,7 +54,7 @@ android {
     buildFeatures {
         dataBinding true
     }
-    flavorDimensions "default"
+    /*flavorDimensions "default"
     productFlavors {
         checking{
             applicationId "com.example.assignmentiwizards.debug"
@@ -59,7 +62,7 @@ android {
         quality{
             applicationId "com.example.assignmentiwizards.qa"
         }
-    }
+    }*/
 }
 
 dependencies {
@@ -86,4 +89,9 @@ dependencies {
     implementation "androidx.navigation:navigation-ui:$nav_version"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
 }
