@@ -39,11 +39,10 @@ platform :android do
   desc "Lane for distributing app using Firebase App Distributions"
     lane :distribute do
         gradle(task: "clean assembleQa")
-        fastlane_firebase_app_distribution(
+        firebase_app_distribution(
             service_credentials_file: "iw_assignment_play_config.json",
             app: "1:197141527930:android:2e82c192a530471c34aac3",
-           # release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
-            release_note: "Note: QA test"
+            release_notes: "Note: QA test",
             groups: "Qa",
             firebase_cli_token: "1//0gd29wq-7vyTcCgYIARAAGBASNwF-L9IrAVnuv-G34MEErW92aBky9_J3-G5lK9KqkTw0h9_-K0Kx2vZfaV4-w73fyj_ePMpgTTs"
         )
