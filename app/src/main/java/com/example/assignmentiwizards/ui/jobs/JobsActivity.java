@@ -109,5 +109,4 @@ public class JobsActivity extends AppCompatActivity {
             }
         super.onBackPressed();
     }
-
 }
