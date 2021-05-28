@@ -1,25 +1,67 @@
-name: Android CI
-
+name: Push App to Firebase
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - github-actions-firebase-app-distribution
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
+      - name: Setting up env variables
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+#          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+        run: |
+          echo $KEY_ALIAS $KEY_PASSWORD $STORE_PASSWORD
+          echo '::set-env name=$KEY_ALIAS::${{ secrets.KEY_ALIAS }}'
+          echo '::set-env name=$KEY_PASSWORD::${{ secrets.KEY_PASSWORD }}'
+          echo '::set-env name=$STORE_PASSWORD::${{ secrets.STORE_PASSWORD }}'
+      - name: Clone Repo
+        uses: actions/checkout@v2
+
+#     - name: Grant execute permission for gradlew
+#       run: chmod +x gradlew
+#     - name: Build with Gradle
+#       run: ./gradlew build
+
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Assemble Apk
+        id: apkRelease
+        run: ./gradlew :app:bundleRelease
+
+      - name: Upload apk
+        id: uploadArtifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: app/build/outputs/apk/release/app-release.apk
+
+      - name: Upload to firebase distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          token: ${{secrets.FIREBASE_CLI_TOKEN}}
+          groups: internal-team
+          file: app/build/outputs/apk/release/app-release.apk
+
+
+#      - name: Slack Notification
+#        uses: rtCamp/action-slack-notify@master
+#        env:
+#          SLACK_CHANNEL: general
+#          SLACK_COLOR: '#FFFFFF'
+#          SLACK_ICON: https://image_url.png
+#          SLACK_MESSAGE: 'New app is available on firebase :rocket:'
+#          SLACK_TITLE: AppName
+#          SLACK_USERNAME: botName
+#          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
