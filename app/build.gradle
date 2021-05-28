@@ -55,12 +55,12 @@ android {
             versionNameSuffix "-qa"
             buildConfigField "String", "Type", '"I AM A QA"'
 
-            firebaseAppDistribution {
+            /*firebaseAppDistribution {
                 appId = "1:197141527930:android:2e82c192a530471c34aac3"
                 serviceCredentialsFile = "/home/dnyaneshwar/AndroidStudioProjects/ProjectCreds/IWAssignment/iw_assignment_play_config.json"
                 releaseNotesFile = "/home/dnyaneshwar/AndroidStudioProjects/ProjectCreds/IWAssignment/qanotes.txt"
                 testers = "dnyaneshwar1926@gmail.com"
-            }
+            }*/
         }
     }
 

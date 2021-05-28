@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "study-projects-31969",
+  "private_key_id": "dd3b12566083ce8645ce3c25b3ee80c2f2ea43b3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC220awU43O+PXQ\n/Y/qECtirqEZXa3MkpiWCXsVp08L28jUaxa/T4jx+QH5ksipqRh6/hZbejS9eoWh\nwM9lTOW7DOMOxn4qAN+X3G0jQJRApc3SqllR7ukg872MRqhoYnh/PbAgnROzaYZx\nqQnd+DET8Fb88K0xIhvweM4jFOWCBRtDnZQ4KWZzJlVYDhA7FLAF5H6AYJ35Kswb\nhWOVTeVmoarKOTx7qdBDIFydykZZivEniK3YezaXZf1CiCMMMouIF9t0PdNfXi4Q\nf6Ot+K5cZdfkV/ClsRMaEMJoMd9PWrLzD6HUXq+BQHKASVmWGsjA3Yzv33B8qIuP\nEUpVqczXAgMBAAECggEAE0JEDzU1pdtt1H2oRzA9yY539Dp8ICQ+gurrtkuhVS/o\nVosS4cJoO4gM77LIhKoFJIsXYrobzOsXIQK0NUikl49TaM56IkVmR1HVgtV959Mu\nuuXrM2h00F4rlBcrDJd2dnxSTRUOKqLOILF7kw/dZ2q0Vr6olxivFaQ7ndFJHOjs\nLPY3xDpGsHo62iIuDJ+aZFv3WqlFR5cJVupsy2flgAk69GkirVTyleaYJMLKHvF4\nTBvORITYXCLItMleoMut8Sm+7WgOhr8K2FngjY3mnMtYX8wAsk1zSAkwBAzKo6Bw\nuchl9GWld2NPOhyNs/Ao6iUoXj4eqOD28HFHpISqpQKBgQDfpRqb8WigQEKUedo0\n0yqF9OpdetS6fSSSRa0c36Ct1HrbdlUs9AxWYFqPV7I8Lcs/QLrTRz5h38rnDYF6\nidX4IDvzzY4xjkX8rGyrm+VORQnHUGuoF15P0CquqNgIFw3FZvoN8zdzQjQX9wk1\nYi/S7NI2bQdBbFoDOOcavCzGywKBgQDRT4lgqaDJ9C1EpZFnn9s3n5XyRHrsTEyC\npBAausTmuLbvKZtwZ6QBtS9QyxNQvaGSDwDydWFd+wuGYJCEfZpbCarCifZEye8Y\nlT6bTCg/7b+aTIO7iTfe9PMmFCQq1n8YTSjtxRep1w/RLwFIvBwueAt3najYOOBe\nj3Un/EeEpQKBgCZx+WsJStURduCTOeGO02aHvaooLV2JmbnTZHjsMHDxb9U+OFIr\n+dr3YVn211rk/GV5OSSMwLqOgBDMD5ADFdc7o1K76U+3h2xyL5QojniwAYhT2M3i\nhoHt5Qh1Wf26CNIAa8fuIYAcx1u/ScP1hwcZUuGsSG0EtUyMgZ3k70WVAoGBAM4y\nXpGdScrqA1ZnDRFah6kKS7t4/ueeWpkwarUKXUM1oPGGuZxIXWdZSJ19ETAvP+YV\nZcd1H1BoKfhdVMFQwykAIvq20qb9j89V53Ex20zvOBwXWIb9LM812/sdSGvzFw2n\npbRmv2MPfIOEnO08cz7L/+/8nwMzNMWy6aVUgFgJAoGAaWpozSEzrjRkov6+HI8z\nkSMopa5B5wrepHcCQRyoPh50Y3q6MQg4SIbv5KujZY+IQFtYYejoQMrQPAo0aTyI\neXtIIzUI5WRaiQZZDx2mpckA91I1ZAJSu71ADqRQ2TYS2Eel6mMazpAYZYOM7TmP\n0JKfwMTCEa0dE5egvkZ4Uzo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "iw-assignment-app-distribution@study-projects-31969.iam.gserviceaccount.com",
+  "client_id": "106140749327196919497",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/iw-assignment-app-distribution%40study-projects-31969.iam.gserviceaccount.com"
+}
