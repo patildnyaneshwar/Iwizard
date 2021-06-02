@@ -36,19 +36,44 @@ platform :android do
     upload_to_play_store
   end
 
-  desc "Lane for distributing app using Firebase App Distributions"
+  desc "Lane for distributing app to testers"
   lane :distribute do
       gradle(task: 'clean')
       gradle(
         task: 'assemble',
         build_type: 'Qa'
         )
+     # increment_app_version_code()
+      increment_app_version_code_name()
+      app_distribution()
+   end
+
+   desc "Lane for distributing app using Firebase App Distributions"
+   private_lane :app_distribution do |options|
       firebase_app_distribution(
           service_credentials_file: "iw_assignment_play_config.json",
           app: ENV["APP"],
           release_notes: "Note: QA test",
           groups: "Qa",
           firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"]
-       )
+        )
+   end
+
+   desc "Lane for incrementing version code of apk"
+   # This works perfect
+   private_lane :increment_app_version_code do |options|
+       increment_version_code(
+               gradle_file_path: "app/build.gradle"
+         )
+   end
+
+   desc "Lane for incrementing versionCode & versionName of apk depends on build"
+   private_lane :increment_app_version_code_name do |options|
+      increment_version_code(app_project_dir: '**/app', flavor: "qa")
+      increment_version_name(
+          app_project_dir: '**/app',
+          bump_type: 'minor',
+          flavor: 'qa'
+        )
    end
 end

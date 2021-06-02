@@ -35,7 +35,7 @@ Deploy a new version to the Google Play
 ```
 fastlane android distribute
 ```
-Lane for distributing app using Firebase App Distributions
+Lane for distributing app to testers
 
 ----
 

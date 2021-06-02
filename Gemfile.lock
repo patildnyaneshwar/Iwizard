@@ -93,6 +93,7 @@ GEM
       xcodeproj (>= 1.13.0, < 2.0.0)
       xcpretty (~> 0.3.0)
       xcpretty-travis-formatter (>= 0.0.3)
+    fastlane-plugin-android_versioning (0.5.4)
     fastlane-plugin-firebase_app_distribution (0.2.9)
     fastlane-plugin-gradle_properties (0.1.0)
       java-properties
@@ -205,6 +206,7 @@ PLATFORMS
 
 DEPENDENCIES
   fastlane
+  fastlane-plugin-android_versioning
   fastlane-plugin-firebase_app_distribution
   fastlane-plugin-gradle_properties
   fastlane-plugin-increment_version_code
