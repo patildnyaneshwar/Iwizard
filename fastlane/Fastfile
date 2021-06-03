@@ -44,7 +44,6 @@ platform :android do
         build_type: 'Qa'
         )
      # increment_app_version_code()
-      increment_app_version_name()
       show_version()
      # increment_app_version_code_name()
       app_distribution()
@@ -67,17 +66,6 @@ platform :android do
        increment_version_code(
                gradle_file_path: "app/build.gradle"
          )
-   end
-
-   desc "Lane for incrementing version code of apk"
-     private_lane :increment_app_version_name do |options|
-         gradle_file = "./android/app/build.gradle"
-         android_set_version_name(
-           gradle_file: gradle_file,
-           bump_type: "patch"
-         )
-         version_name = android_get_version_name(gradle_file: gradle_file)
-         puts(version_name) # Returns an string
    end
 
    desc "Lane to show versions"

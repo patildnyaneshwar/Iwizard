@@ -5,22 +5,57 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0034851">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.0037925">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: clean" time="2.8159461">
+      <testcase classname="fastlane.lanes" name="01: clean" time="2.8320445">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: assembleQa" time="14.7106758">
+      <testcase classname="fastlane.lanes" name="02: assembleQa" time="13.264692">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: Switch to android increment_app_version_name lane" time="0.0026167">
+      <testcase classname="fastlane.lanes" name="03: Switch to android increment_app_version_name lane" time="0.0038751">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: android_set_version_name" time="0.0118705">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: android_get_version_name" time="0.0142174">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: Switch to android show_version lane" time="0.0033745">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: get_version_name" time="0.1710926">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: get_version_code" time="0.1180087">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: Switch to android app_distribution lane" time="0.0025037">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: firebase_app_distribution" time="29.5508661">
         
       </testcase>
     
