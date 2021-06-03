@@ -43,9 +43,10 @@ platform :android do
         task: 'assemble',
         build_type: 'Qa'
         )
-     # increment_app_version_code()
+      increment_app_version_code()
+      increment_app_version_name()
       show_version()
-     # increment_app_version_code_name()
+      #increment_app_version_code_name()
       app_distribution()
    end
 
@@ -62,11 +63,22 @@ platform :android do
 
    desc "Lane for incrementing version code of apk"
    # This works perfect
+   # https://github.com/Jems22/fastlane-plugin-increment_version_code
    private_lane :increment_app_version_code do |options|
        increment_version_code(
                gradle_file_path: "app/build.gradle"
          )
    end
+
+   desc "Lane for incrementing version name of apk"
+   # This works perfect
+   # https://github.com/fierysolid/fastlane-plugin-increment_version_name
+   private_lane :increment_app_version_name do |options|
+        increment_version_name(
+                gradle_file_path: "app/build.gradle",
+                bump_type: "patch"
+          )
+      end
 
    desc "Lane to show versions"
    private_lane :show_version do |options|
