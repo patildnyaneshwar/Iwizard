@@ -5,7 +5,22 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0032542">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0034851">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: clean" time="2.8159461">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: assembleQa" time="14.7106758">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: Switch to android increment_app_version_name lane" time="0.0026167">
         
       </testcase>
     
